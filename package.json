@@ -6,13 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "nodemon index.js",
-    "start": "node index.js"
+    "single": "node single.js",
+    "cluster": "node cluster.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-http-proxy": "^1.5.1",
+    "socket.io": "^2.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"

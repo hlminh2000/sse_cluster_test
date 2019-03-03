@@ -6,4 +6,5 @@ Unlike WSS, SSE does not require a handshake to establish a connection, so no ad
 ## Running the demo:
 
 1. `npm i && npm start`
-2. From browser (or anything really), access `http://localhost: 3000/stream`
+2. From browser (or anything really), access `http://localhost: 3000`
+3. Watch and notice how websocket will reset occasionally as

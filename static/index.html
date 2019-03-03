@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"
+    ></script>
+    <title></title>
+  </head>
+
+  <body style="display: flex; flex-direction: row">
+    <div id="ws">
+      Websocket
+      <div class="content"></div>
+    </div>
+    <div id="sse">
+      Server Sent events
+      <div class="content"></div>
+    </div>
+  </body>
+  <script>
+    // WS section, fails because cannot cannot perform handshake on cluster
+    const socket = io("http://localhost:3000", { transports: ["websocket"] });
+    socket.on("event", data => {
+      const contentElement = document.querySelector("#ws .content");
+      const element = document.createElement("div");
+      element.innerHTML = `message: ${JSON.stringify(data)}`;
+      contentElement.appendChild(element);
+    });
+
+    // SSE section
+    const sseEventSource = new EventSource("/stream");
+    sseEventSource.onmessage = function(e) {
+      const contentElement = document.querySelector("#sse .content");
+      const element = document.createElement("div");
+      element.innerHTML = `message: ${e.data}`;
+      contentElement.appendChild(element);
+    };
+  </script>
+</html>
