@@ -1,7 +1,7 @@
 # Server Sent Event with clusterized Node.js
 
 This is a demo of using server-sent event under a clusterized node environment.
-Unlike WSS, SSE does not require a handshake to establish a connection, so no additional magic is needed at load-balancing to ensure handshake requests are routed to the same node in the cluster.
+Unlike WS, SSE does not require a handshake to establish a connection, so no additional magic is needed at load-balancing to ensure handshake requests are routed to the same node in the cluster.
 
 ## Running the demo:
 
