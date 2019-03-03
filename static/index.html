@@ -21,7 +21,7 @@
   </body>
   <script>
     // WS section, fails because cannot cannot perform handshake on cluster
-    const socket = io("http://localhost:3000", { transports: ["websocket"] });
+    const socket = io("/", { transports: ["websocket"] });
     socket.on("event", data => {
       const contentElement = document.querySelector("#ws .content");
       const element = document.createElement("div");

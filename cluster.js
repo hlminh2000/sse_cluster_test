@@ -1,6 +1,6 @@
 const createServer = require("./app");
 const proxy = require("express-http-proxy");
-const { PORT = 3000 } = process.env;
+const { PORT = 4000 } = process.env;
 
 const app = require("express")();
 

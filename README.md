@@ -5,6 +5,16 @@ Unlike WSS, SSE does not require a handshake to establish a connection, so no ad
 
 ## Running the demo:
 
-1. `npm i && npm start`
+Install dependencies: `npm i`
+
+### Singleton environment:
+
+1. `npm run single`
 2. From browser (or anything really), access `http://localhost: 3000`
-3. Watch and notice how websocket will reset occasionally as
+3. Notice both websocket and SSE implementation works
+
+### Cluster environment:
+
+1. `npm run cluster`
+2. From browser (or anything really), access `http://localhost: 4000`
+3. Notice that only SSE is working as WS fails to establish handshake.
