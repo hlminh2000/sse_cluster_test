@@ -33,6 +33,6 @@ if (cluster.isMaster) {
   }
 } else {
   app.listen(PORT, () => {
-    console.log(`listening on port ${PORT}`);
+    console.log(`worker ${cluster.worker.id}, listening on port ${PORT}`);
   });
 }
