@@ -3,6 +3,8 @@
 This is a demo of using server-sent event under a clusterized node environment.
 Unlike WS, SSE does not require a handshake to establish a connection, so no additional magic is needed at load-balancing to ensure handshake requests are routed to the same node in the cluster.
 
+The cluster environment is simulated with an http proxy.
+
 ## Running the demo:
 
 Install dependencies: `npm i`
