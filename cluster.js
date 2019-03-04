@@ -23,5 +23,5 @@ PORTS.forEach(port => {
 });
 
 app.listen(PORT, () => {
-  console.log(`master listening on port ${PORT}`);
+  console.log(`======= MASTER listening on port ${PORT} =======`);
 });
