@@ -10,9 +10,9 @@ const randomInt = max => Math.floor(Math.random() * Math.floor(max));
 app.use(
   "/",
   proxy(() => {
-    const host = `http://localhost:${PORTS[randomInt(PORTS.length)]}`;
-    console.log("host: ", host);
-    return host;
+    const worker = `http://localhost:${PORTS[randomInt(PORTS.length)]}`;
+    console.log("worker: ", worker);
+    return worker;
   })
 );
 
