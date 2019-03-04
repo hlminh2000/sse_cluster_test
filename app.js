@@ -13,9 +13,6 @@ const createServer = () => {
     bodyParser.urlencoded({ extended: false }),
     bodyParser.json(),
     cors(),
-    (req, res, next) => {
-      next();
-    },
     express.static("static")
   );
 
